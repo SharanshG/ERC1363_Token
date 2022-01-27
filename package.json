@@ -1,0 +1,72 @@
+{
+  "name": "erc-token",
+  "version": "4.4.1",
+  "description": "ERC-1363 Token Implementation",
+  "files": [
+    "contracts",
+    "test"
+  ],
+  "scripts": {
+    "truffle:console": "truffle develop",
+    "truffle:compile": "scripts/compile.sh",
+    "truffle:test": "npm run truffle:compile && scripts/test.sh",
+    "hardhat:console": "hardhat console",
+    "hardhat:compile": "hardhat compile",
+    "hardhat:test": "hardhat test",
+    "hardhat:coverage": "hardhat coverage --network coverage",
+    "test": "npm run hardhat:test",
+    "coverage": "scripts/coverage.sh",
+    "clean": "rm -rf coverage",
+    "profile": "npm run clean && npm run coverage && open coverage/index.html",
+    "lint": "npm run lint:js && npm run lint:sol",
+    "lint:fix": "npm run lint:js:fix && npm run lint:sol:fix",
+    "lint:js": "eslint .",
+    "lint:js:fix": "eslint . --fix",
+    "lint:sol": "solhint --max-warnings 0 \"contracts/**/*.sol\"",
+    "lint:sol:fix": "prettier --write \"contracts/**/*.sol\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SharanshG/ERC1363_Token.git"
+  },
+  "keywords": [
+    "solidity",
+    "ethereum",
+    "smart",
+    "contracts",
+    "token",
+    "erc1363"
+  ],
+  "author": "Sharansh Guha",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SharanshG/ERC1363_Token/issues"
+  },
+  "homepage": "https://SharanshG.github.io/ERC1363_Token",
+  "dependencies": {
+    "@openzeppelin/contracts": "4.4.1"
+  },
+  "devDependencies": {
+    "@nomiclabs/hardhat-ganache": "^2.0.1",
+    "@nomiclabs/hardhat-truffle5": "^2.0.3",
+    "@nomiclabs/hardhat-web3": "^2.0.0",
+    "@openzeppelin/test-helpers": "^0.5.15",
+    "@vuepress/plugin-google-analytics": "^1.8.2",
+    "chai": "^4.3.4",
+    "eslint": "^7.32.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-mocha-no-only": "^1.1.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.2.0",
+    "eslint-plugin-standard": "^5.0.0",
+    "ganache-cli": "^6.12.2",
+    "hardhat": "^2.8.0",
+    "prettier": "^2.5.1",
+    "prettier-plugin-solidity": "^1.0.0-beta.19",
+    "solhint": "^3.3.6",
+    "solhint-plugin-prettier": "^0.0.5",
+    "solidity-coverage": "^0.7.17",
+    "truffle": "^5.4.24"
+  }
+}
