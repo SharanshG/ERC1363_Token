@@ -12,9 +12,9 @@ There are many proposed uses of Ethereum smart contracts that can accept ERC-20 
 
 Examples could be:
 
-to create a token payable crowdsale
-selling services for tokens
-paying invoices
-making subscriptions
+> to create a token payable crowdsale
+> selling services for tokens
+> paying invoices
+> making subscriptions
 
 Anyway you can use it for specific utilities or for any other purposes who require the execution of a callback after a transfer or approval received.
